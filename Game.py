@@ -17,6 +17,7 @@ class Game(object):
     def print(self):
         df = pandas.DataFrame(self.matrix)
         print(df)
+        print("\n")
 
     def bounded_cell(self, row, column):
         return 0 <= row < self.rows and 0 <= column < self.columns
@@ -86,5 +87,4 @@ if __name__ == '__main__':
     game_instance.set_alive(2, 5)
     game_instance.print()
     game_instance.play()
-    print("------------------------------------------")
     game_instance.print()
